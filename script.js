@@ -21,17 +21,17 @@ function countdown(){
     const seconds = (minutes - parseInt(minutes))* 60;
 
     document.getElementById("days").innerHTML = parseInt(days);
-    document.getElementById("hours").innerHTML = parseInt(hours);
-    document.getElementById("minutes").innerHTML = parseInt(minutes);
-    document.getElementById("seconds").innerHTML = formatSeconds(parseInt(seconds));
+    document.getElementById("hours").innerHTML = formatTime(parseInt(hours));
+    document.getElementById("minutes").innerHTML = formatTime(parseInt(minutes));
+    document.getElementById("seconds").innerHTML = formatTime(parseInt(seconds));
 
 }
 
-function formatSeconds(seconds){
-    if(seconds < 10){
-        return "0"+ seconds;
+function formatTime(time){
+    if(time < 10){
+        return "0"+ time;
     }
-    return seconds
+    return time;
 }
 
 function nth(d) {
