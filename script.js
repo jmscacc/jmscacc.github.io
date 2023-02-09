@@ -12,7 +12,7 @@ function countdown(){
     const currentMonthsarry = (currentDate.getTime() - firstDate.getTime()) / 2629746000;
     document.getElementById("months").innerHTML = parseInt(currentMonthsarry) + 1;
     document.getElementById("ordinal").innerHTML = nth(parseInt(currentMonthsarry));
-    const monthsarryMonth = currentDate.getMonth() + 1;
+    const monthsarryMonth = currentDate.getMonth();
     const monthsarryDate = new Date(month[monthsarryMonth] + " 10 " + currentDate.getFullYear());
     const totalSeconds = (monthsarryDate.getTime() - currentDate.getTime()) / 1000;
     const days = totalSeconds / 86400;
